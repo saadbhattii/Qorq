@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="assets/logo.svg" alt="Qorq logo" width="60" style="vertical-align: middle;">
+  <img src="assets/logo.svg" alt="Qorq logo" width="40" style="vertical-align: middle;">
   Qorq
 </h1>
 
