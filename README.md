@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="Qorq logo" width="200">
+  <img src="assets/logo.svg" alt="Qorq logo" width="170">
   <h1 align="left">Qorq</h1>
 </p>
 
-A drag-and-drop tool for exploring how single-qubit quantum gates transform complex statevectors visualized as arrows sharing origin on an Argand plane. 
+A drag-and-drop tool for exploring how single-qubit quantum gates transform complex statevectors visualized as arrows with a shared origin on an Argand plane. 
 
 Quantum mechanics is fundamentally formulated over complex Hilbert spaces. Yet many of our most common visual and pedagogical tools translate quantum states into real-valued representations, emphasizing geometry or probabilities over the complex amplitudes themselves.
 
