@@ -61,7 +61,7 @@ def build_component() -> str:
     return f"<style>\n{css}\n</style>\n{body}\n<script>\n{scripts}\n</script>"
 
 
-st.set_page_config(page_title="argand-qubit", layout="wide")
+st.set_page_config(page_title="Qorq", layout="wide")
 
 # Strip Streamlit chrome so the tool fills the window without scrolling.
 st.markdown(
