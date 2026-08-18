@@ -7,13 +7,14 @@
   <a href="https://qorq-qc.streamlit.app/" style="font-size: 0.5em; vertical-align: middle;">[live]</a>
 </h1>
 
-A drag-and-drop tool for exploring how single-qubit quantum gates transform complex statevectors visualized as arrows with a shared origin on an Argand plane.
+A drag-and-drop tool for exploring how single-qubit quantum gates transform a
+complex statevector, drawn as phasors from a shared origin on an Argand plane.
 
 There's no installing, configuring, or scripting required: just go to https://qorq-qc.streamlit.app, drag gates, and the output displays update in real time.
 
-Quantum mechanics is fundamentally formulated over complex Hilbert spaces. Yet many of our most common visual and pedagogical tools translate quantum states into real-valued representations, emphasizing geometry or probabilities over the complex amplitudes themselves.
+Quantum mechanics is formulated over complex Hilbert spaces. Yet many of our common visual and pedagogical tools translate quantum states into real-valued representations, emphasizing geometry or probabilities over the complex amplitudes themselves.
 
-This project was created with the curiosity for a visualization in the complex hilbert space itself. The Bloch sphere is also displayed for comparison in the tool.
+This project was created out of curiosity for visualizing quantum states in their native complex representation. Qorq draws the two complex amplitudes for a single qubit as phasors with a shared origin on an Argand plane, with a Bloch sphere displayed alongside it so the two representations can be compared directly for additional intuition.
 
 ## User Interface
 
