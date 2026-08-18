@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+  index.html -- development entry point.
+
+  Open this file directly in a browser. There is no build step and no
+  server required: the scripts below are plain classic scripts, loaded in
+  dependency order, so file:// works.
+
+  Use this, not Streamlit, when debugging. You get real filenames and line
+  numbers in devtools, and `AQ` is on window so you can experiment:
+
+      AQ.state.fold([{re:1,im:0},{re:0,im:0}], [{g:'H'}])
+      AQ.classify.of(AQ.gates.def('Rx').m(Math.PI))
+      AQ.selftest.run()
+
+  app.py inlines these same files for Streamlit. Keep the order in sync
+  with FILES in app.py -- tests/run.js checks that they match.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>argand-qubit (dev)</title>
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<!-- BODY:START -->
+<div class="bar">
+  <span class="lbl">TOOLBOX</span>
+  <span id="toolFixed"></span>
+  <span id="toolParam"></span>
+  <span class="lbl" style="margin-left:8px">angle</span>
+  <input type="number" id="angle" value="90" step="1" style="width:54px"><span class="lbl">deg</span>
+</div>
+
+<div class="bar">
+  <span class="lbl">CIRCUIT</span>
+  <button id="btnUndo">undo</button>
+  <button id="btnClear">clear</button>
+  <button id="btnPrev">&#9664;</button>
+  <button id="btnNext">&#9654;</button>
+  <span class="lbl" style="margin-left:4px">step</span>
+  <span id="stepinfo" style="font-family:'Courier New',monospace"></span>
+  <span class="lbl" style="margin-left:10px">code</span>
+  <input type="text" id="code" style="width:250px">
+  <span id="codeErr"></span>
+  <div id="wire"></div>
+</div>
+
+<div class="cols">
+
+  <div class="bar">
+    <div id="argand"></div>
+  </div>
+
+  <div class="bar" style="width:296px">
+    <div class="lbl">BLOCH</div>
+    <div id="bloch"></div>
+    <div class="approx">approximate projection</div>
+  </div>
+
+  <div class="bar" style="flex:1; min-width:250px">
+    <div class="lbl">STATE</div>
+    <div id="psi"></div>
+    <table class="ro" id="readout"></table>
+
+    <hr class="sep">
+    <div class="lbl">INITIAL STATE</div>
+    <div style="margin:3px 0">
+      <button data-preset="1,0,0">|0&#10217;</button>
+      <button data-preset="0,0,0">|1&#10217;</button>
+      <button data-preset="0.7071067811865476,0,0">|+&#10217;</button>
+      <button data-preset="0.7071067811865476,0,180">|&minus;&#10217;</button>
+      <button data-preset="0.7071067811865476,0,90">|i&#10217;</button>
+      <button data-preset="0.7071067811865476,0,-90">|&minus;i&#10217;</button>
+    </div>
+    <div style="margin:3px 0">
+      <span class="lbl">|z0|</span><input type="number" id="a0" value="1" min="0" max="1" step="0.01" style="width:52px">
+      <span class="lbl">arg z0</span><input type="number" id="p0" value="0" step="1" style="width:52px">
+      <span class="lbl">arg z1</span><input type="number" id="p1" value="0" step="1" style="width:52px">
+      <button id="btnSet">set</button>
+    </div>
+
+    <hr class="sep">
+    <div class="lbl">VIEW</div>
+    <label class="opt"><input type="checkbox" id="optGauge"> gauge fix (arg z0 = 0)</label>
+    <label class="opt"><input type="checkbox" id="optGhost"> ghost of previous step</label>
+    <label class="opt"><input type="checkbox" id="optSum"> sum construction on mixers</label>
+    <label class="opt"><input type="checkbox" id="optRing" checked> 1/&radic;2 ring</label>
+    <div style="margin-top:6px"><button id="btnSvg">svg source</button></div>
+  </div>
+</div>
+
+<div class="bar"><span id="selftest"></span></div>
+
+<div id="floater"></div>
+<div id="overlay">
+  <button id="btnClose">close</button>
+  <textarea id="svgsrc" readonly></textarea>
+</div>
+<!-- BODY:END -->
+
+<script src="src/complex.js"></script>
+<script src="src/gates.js"></script>
+<script src="src/classify.js"></script>
+<script src="src/describe.js"></script>
+<script src="src/state.js"></script>
+<script src="src/circuit.js"></script>
+<script src="src/argand.js"></script>
+<script src="src/bloch.js"></script>
+<script src="src/selftest.js"></script>
+<script src="src/ui.js"></script>
+
+</body>
+</html>

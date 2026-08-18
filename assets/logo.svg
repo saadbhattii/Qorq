@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-labelledby="t d">
+  <title id="t">argand-qubit</title>
+  <desc id="d">A circle with two hands from a shared centre and a bold arc marking the angle between them.</desc>
+
+  <circle cx="120" cy="120" r="92" fill="none" stroke="#B4B2A9" stroke-width="2.5" opacity="0.55"/>
+
+  <path d="M 207.5 91.6 A 92 92 0 0 0 63.4 47.5"
+        fill="none" stroke="#C4761A" stroke-width="9" stroke-linecap="round"/>
+
+  <line x1="120" y1="120" x2="199.9" y2="94.0"
+        stroke="#4F46B8" stroke-width="7" stroke-linecap="round"/>
+
+  <line x1="120" y1="120" x2="84.3" y2="74.3"
+        stroke="#128B70" stroke-width="7" stroke-linecap="round"/>
+
+  <circle cx="120" cy="120" r="5.5" fill="#3D3D3A"/>
+</svg>

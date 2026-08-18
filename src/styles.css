@@ -1,0 +1,94 @@
+/* styles.css -- deliberately plain. No gradients, shadows, radii or
+   transitions. The tool is meant to be read, not admired. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0; padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px; color: #000; background: #fff;
+}
+
+.bar { border: 1px solid #999; padding: 5px 7px; margin-bottom: 4px; }
+.lbl { font-size: 10px; color: #555; margin-right: 4px; letter-spacing: .04em; }
+.hint { color: #aaa; margin-left: 8px; }
+.ket { font-family: "Courier New", Courier, monospace; margin-right: 4px; }
+
+/* toolbox tiles */
+.tile {
+  display: inline-block; width: 34px; height: 26px; line-height: 24px;
+  text-align: center; border: 1px solid #666; background: #eee;
+  margin: 1px; cursor: grab; user-select: none;
+}
+.tile:hover { background: #ddd; }
+.tile.wide { width: 46px; }
+
+/* placed gates */
+.slot {
+  display: inline-block; width: 34px; height: 30px; line-height: 28px;
+  text-align: center; border: 1px solid #666; background: #eee;
+  margin: 0 1px; cursor: grab; user-select: none; position: relative;
+}
+.slot.sel { border: 2px solid #000; line-height: 26px; }
+.slot.dim { opacity: .38; }
+.slot .ang { position: absolute; bottom: -12px; left: 0; right: 0; font-size: 9px; color: #555; }
+
+.drop { display: inline-block; width: 3px; height: 30px; vertical-align: middle; }
+.drop.on { background: #000; }
+
+#wire { white-space: nowrap; overflow-x: auto; overflow-y: hidden; padding: 8px 0 14px 0; }
+
+#floater {
+  position: fixed; pointer-events: none; z-index: 999; display: none;
+  width: 34px; height: 26px; line-height: 24px; text-align: center;
+  border: 1px solid #000; background: #ffc;
+}
+
+/* readouts */
+table.ro { border-collapse: collapse; font-family: "Courier New", Courier, monospace; }
+table.ro td { padding: 1px 10px 1px 0; }
+table.ro td.k { color: #555; font-family: Arial, Helvetica, sans-serif; font-size: 11px; }
+
+#psi { font-family: "Courier New", Courier, monospace; margin: 2px 0 7px 0; }
+
+/* description panel */
+#desc { border: 1px solid #ccc; padding: 6px 8px; height: 92px; overflow: hidden; background: #fafafa; }
+.dhead { font-weight: bold; margin-bottom: 3px; }
+.dsum { color: #333; line-height: 1.45; }
+.dmath { font-family: "Courier New", Courier, monospace; margin-top: 5px; color: #000; }
+.cols > .bar:first-child { width: 436px; flex: 0 0 436px; }
+#desc { width: 100%; overflow-wrap: break-word; }
+
+.cat { border: 1px solid #666; padding: 0 5px; font-weight: normal; font-size: 11px; background: #fff; }
+.catmover { background: #eef; }
+.catrotator { background: #efe; }
+.catmoverphase { background: #eef; }
+.catmixer { background: #fee; }
+.catidentity { background: #f2f2f2; }
+
+/* controls */
+button { font-family: Arial, Helvetica, sans-serif; font-size: 11px; padding: 1px 7px; }
+input[type=number], input[type=text] {
+  font-family: "Courier New", Courier, monospace; font-size: 11px;
+  border: 1px solid #999; padding: 1px 3px;
+}
+label.opt { display: block; margin: 1px 0; }
+
+hr.sep { border: none; border-top: 1px solid #ddd; margin: 6px 0; }
+
+#selftest { font-size: 10px; }
+#selftest.ok { color: #060; }
+#selftest.bad { color: #c00; font-weight: bold; }
+#codeErr { color: #c00; font-size: 10px; }
+
+.approx { font-size: 10px; color: #888; text-align: center; }
+
+#overlay {
+  position: fixed; left: 0; top: 0; right: 0; bottom: 0;
+  background: #fff; border: 2px solid #000; padding: 8px; display: none; z-index: 1000;
+}
+#overlay textarea {
+  width: 100%; height: 92%; font-family: "Courier New", Courier, monospace; font-size: 10px;
+}
+
+.cols { display: flex; gap: 8px; align-items: flex-start; }

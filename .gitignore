@@ -1,0 +1,130 @@
+# -------------------------
+# Python
+# -------------------------
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Type checking / linting caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+
+# Coverage reports
+.coverage
+.coverage.*
+htmlcov/
+
+
+# -------------------------
+# Streamlit
+# -------------------------
+
+# Local secrets (never commit)
+.streamlit/secrets.toml
+
+
+# -------------------------
+# Jupyter
+# -------------------------
+
+.ipynb_checkpoints/
+
+
+# -------------------------
+# Node / JavaScript
+# -------------------------
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+
+
+# -------------------------
+# Editors / IDEs
+# -------------------------
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+
+# -------------------------
+# OS files
+# -------------------------
+
+.DS_Store
+Thumbs.db
+
+
+# -------------------------
+# Environment files
+# -------------------------
+
+.env
+.env.*
+!.env.example
+
+
+# -------------------------
+# Logs
+# -------------------------
+
+*.log
+
+
+# -------------------------
+# Temporary files
+# -------------------------
+
+*.tmp
+*.temp
+.cache/
+
+
+# -------------------------
+# Streamlit local state
+# -------------------------
+
+.streamlit/.cache/
+
+
+# -------------------------
+# Data / large generated files
+# -------------------------
+
+*.csv
+*.jsonl
+*.parquet
+*.sqlite
+*.db
+
+# Uncomment if you have local datasets
+# data/
+# datasets/
+
+
+# -------------------------
+# Build artifacts
+# -------------------------
+
+*.egg-info/
+.eggs/
+dist/
