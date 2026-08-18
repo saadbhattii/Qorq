@@ -1,7 +1,7 @@
-<h1 align="center">
-  <img src="assets/logo.svg" alt="Qorq logo" width="40" style="vertical-align: middle;">
-  Qorq
-</h1>
+<p align="center">
+  <img src="assets/logo.svg" alt="Qorq logo" width="200">
+  <h1 align="left">Qorq</h1>
+</p>
 
 A drag-and-drop tool for exploring how single-qubit quantum gates transform complex statevectors visualized as arrows sharing origin on an Argand plane. 
 
