@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/logo.svg" alt="Qorq logo" width="170">
-</p>
-
 <h1 align="left">
   Qorq
   <a href="https://qorq-qc.streamlit.app/" style="font-size: 0.5em; vertical-align: middle;">[live]</a>
