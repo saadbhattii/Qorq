@@ -1,6 +1,5 @@
-<h1 align="left">
+<h1 align="center">
   Qorq
-  <a href="https://qorq-qc.streamlit.app/" style="font-size: 0.5em; vertical-align: middle;">[live]</a>
 </h1>
 
 A drag-and-drop tool for exploring how single-qubit quantum gates transform a
